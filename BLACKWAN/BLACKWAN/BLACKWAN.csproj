@@ -7,8 +7,8 @@
     <ProjectGuid>{B138FFBA-1076-4B58-8A98-67B34E8A7C5C}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>hidden_tear</RootNamespace>
-    <AssemblyName>hidden-tear</AssemblyName>
+    <RootNamespace>BLACKWAN</RootNamespace>
+    <AssemblyName>BLACKWAN</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -66,6 +66,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hidden-tear", "hidden-tear\hidden-tear.csproj", "{B138FFBA-1076-4B58-8A98-67B34E8A7C5C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLACKWAN", "BLACKWAN\BLACKWAN.csproj", "{B138FFBA-1076-4B58-8A98-67B34E8A7C5C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,5 +18,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FC2B2F55-4F59-4153-92C6-0A5F58EE1B42}
 	EndGlobalSection
 EndGlobal
