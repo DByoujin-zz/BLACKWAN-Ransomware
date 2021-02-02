@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace hidden_tear_decrypter
+namespace BLACKWAN_decrypter
 {
     static class Program
     {

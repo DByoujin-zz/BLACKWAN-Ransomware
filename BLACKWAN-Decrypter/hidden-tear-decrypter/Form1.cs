@@ -26,7 +26,7 @@ using Microsoft.Win32;
 using System.Runtime.InteropServices;
 using System.Text.RegularExpressions;
 
-namespace hidden_tear_decrypter
+namespace BLACKWAN_decrypter
 {
     public partial class Form1 : Form
     {

@@ -1,4 +1,4 @@
-﻿namespace hidden_tear_decrypter
+﻿namespace BLACKWAN_decrypter
 {
     partial class Form1
     {
