@@ -108,7 +108,7 @@ namespace hidden_tear_decrypter
             {
                 DecryptDirectory(childDirectories[i]);
             }
-            label3.Visible = true;
+            label4.Visible = true;
             
         }
 
@@ -120,6 +120,11 @@ namespace hidden_tear_decrypter
         }
 
         private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
         {
 
         }
