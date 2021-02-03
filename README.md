@@ -3,7 +3,8 @@ BLACKWAN은 교육의 목적으로 Hideen-tear를 기반으로 만든 랜섬웨�
 기본적으로 바탕화면의 있는 파일만 암호화 합니다.
 
 ## 기존 Hidden-tear랑 다른점
-기존 Hidden-tear는 서버로 암호를 보낸다면, BLACKWAN은 서버로 암호를 보내지 않는다는 것입니다.
+기존 Hidden-tear는 서버로 암호를 보낸다면, BLACKWAN은 서버로 암호를 보내지 않는다는 것입니다.  
+또한 Hidden-tear는 .locked라는 확장자명으로 변경되지만, BLACKWAN 랜섬웨어는 랜덤 확장자 명으로 암호화하여 더욱더 복구화 하기 힘들게 합니다.
 
 ## 주의사항!
 BLACKWAN은 교육의 목적으로 만들어진 랜섬웨어 입니다.  
