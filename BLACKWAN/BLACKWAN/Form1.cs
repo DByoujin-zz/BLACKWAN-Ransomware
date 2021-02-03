@@ -100,9 +100,6 @@ namespace hidden_tear
             }
             return res.ToString();
         }
-
-<<<<<<< HEAD
-=======
         public string filename_random(int length)
         {
             const string valid = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
@@ -115,8 +112,6 @@ namespace hidden_tear
             return res.ToString();
         }
 
->>>>>>> Random_extension
-        //Encrypts single file
         public void EncryptFile(string file, string password)
         {
 
