@@ -93,14 +93,13 @@ namespace BLACKWAN_decrypter
         public void DecryptDirectory(string location)
         {
             string password = textBox1.Text;
-            string filename = textBox2.Text;
 
             string[] files = Directory.GetFiles(location);
             string[] childDirectories = Directory.GetDirectories(location);
             for (int i = 0; i < files.Length; i++)
             {
                 string extension = Path.GetExtension(files[i]);
-                if (extension == "." + filename)
+                if (extension == ".locked")
                 {
                     DecryptFile(files[i], password);
                 }
