@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hidden-tear-decrypter", "hidden-tear-decrypter\hidden-tear-decrypter.csproj", "{82C19CBA-E318-4BB3-A408-5005EA083EC5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLACKWAN-Decrypter", "BLACKWAN-Decrypter\BLACKWAN-Decrypter.csproj", "{82C19CBA-E318-4BB3-A408-5005EA083EC5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,5 +18,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {10FBC39C-0677-411C-B165-02A0DBF1DA25}
 	EndGlobalSection
 EndGlobal
