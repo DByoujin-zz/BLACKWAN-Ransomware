@@ -1,5 +1,5 @@
 ## BLACKWAN란?
-BLACKWAN은 교육의 목적으로 Hideen-tear를 기반으로 만든 랜섬웨어 입니다.
+BLACKWAN은 교육의 목적으로 Hideen-tear를 기반으로 만든 랜섬웨어 입니다.  
 기본적으로 바탕화면의 있는 파일만 암호화 합니다.
 
 ## 기존 Hidden-tear랑 다른점
