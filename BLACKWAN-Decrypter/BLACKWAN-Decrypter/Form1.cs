@@ -10,21 +10,10 @@
  * You could go to jail on obstruction of justice charges just for running hidden tear, even though you are innocent.
  */
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Security;
-using System.Security.Cryptography;
 using System.IO;
-using System.Net;
-using Microsoft.Win32;
-using System.Runtime.InteropServices;
-using System.Text.RegularExpressions;
+using System.Security.Cryptography;
+using System.Text;
+using System.Windows.Forms;
 
 namespace BLACKWAN_decrypter
 {
@@ -50,7 +39,7 @@ namespace BLACKWAN_decrypter
             {
                 using (RijndaelManaged AES = new RijndaelManaged())
                 {
-                     
+
                     AES.KeySize = 256;
                     AES.BlockSize = 128;
 
@@ -66,15 +55,15 @@ namespace BLACKWAN_decrypter
                         cs.Close();
                     }
                     decryptedBytes = ms.ToArray();
-                        
-                  
+
+
                 }
             }
 
             return decryptedBytes;
         }
 
-        public void DecryptFile(string file,string password)
+        public void DecryptFile(string file, string password)
         {
 
             byte[] bytesToBeDecrypted = File.ReadAllBytes(file);
@@ -110,7 +99,7 @@ namespace BLACKWAN_decrypter
                 DecryptDirectory(childDirectories[i]);
             }
             label4.Visible = true;
-            
+
         }
 
         private void button1_Click(object sender, EventArgs e)
