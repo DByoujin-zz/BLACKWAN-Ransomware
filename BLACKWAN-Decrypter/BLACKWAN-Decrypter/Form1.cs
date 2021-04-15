@@ -1,15 +1,4 @@
-﻿/*
- _     _     _     _              _                  
-| |   (_)   | |   | |            | |                 
-| |__  _  __| | __| | ___ _ __   | |_ ___  __ _ _ __ 
-| '_ \| |/ _` |/ _` |/ _ \ '_ \  | __/ _ \/ _` | '__|
-| | | | | (_| | (_| |  __/ | | | | ||  __/ (_| | |   
-|_| |_|_|\__,_|\__,_|\___|_| |_|  \__\___|\__,_|_| 
- * Coded by Utku Sen(Jani) / August 2015 Istanbul / utkusen.com 
- * hidden tear may be used only for Educational Purposes. Do not use it as a ransomware!
- * You could go to jail on obstruction of justice charges just for running hidden tear, even though you are innocent.
- */
-using System;
+﻿using System;
 using System.IO;
 using System.Security.Cryptography;
 using System.Text;
